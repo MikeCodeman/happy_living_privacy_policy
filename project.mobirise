@@ -1,0 +1,162 @@
+{
+  "settings": {
+    "name": "ten_app_privacy_policy",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "partneramp",
+      "title": "PartnerAMP",
+      "styling": {
+        "primaryColor": "#ff4a17",
+        "secondaryColor": "#14212B",
+        "successColor": "#cccccc",
+        "infoColor": "#222222",
+        "warningColor": "#fac769",
+        "dangerColor": "#989898",
+        "mainFont": "Nunito Sans",
+        "display1Font": "Amiri",
+        "display1Size": 4.5,
+        "display2Font": "Amiri",
+        "display2Size": 3,
+        "display5Font": "Amiri",
+        "display5Size": 1.875,
+        "display7Font": "Nunito Sans",
+        "display7Size": 1.125,
+        "display4Font": "Nunito Sans",
+        "display4Size": 0.9,
+        "isRoundedButtons": false,
+        "isScrollToTopButton": false,
+        "arrowColor": "#000000"
+      },
+      "additionalSetColors": [
+        "#fc400b"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.1.4",
+    "siteFonts": [],
+    "imageResize": true,
+    "favicon": "@PROJECT_PATH@/assets/images/final-logo-20190404-90x80-90x80.png",
+    "canonical-url": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.1.4"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "privacy_policy",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
+            },
+            "#mp_image": {
+              "display": "none"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when not (@showTitle)": {
+              ".mbr-sectiion-subtitle": {
+                "margin-bottom": "3rem"
+              }
+            },
+            ".text-wrap": {
+              "max-width": "700px",
+              "position": "relative",
+              "z-index": "2"
+            },
+            ".mbr-sectiion-subtitle": {
+              "color": "#fc400b"
+            },
+            ".link-wrap": {
+              "display": "flex"
+            },
+            ".block-text": {
+              "margin-left": "1rem"
+            },
+            ".link": {
+              "position": "relative",
+              "padding-left": "5rem",
+              "cursor": "pointer",
+              "display": "inline-block",
+              ".icon-wrap": {
+                "position": "absolute",
+                "left": "0px",
+                "top": "50%",
+                "transform": "translateY(-50%)",
+                "padding-left": "5px",
+                "background": "#ffffff",
+                "border-radius": "50%",
+                "width": "75px",
+                "height": "75px",
+                "align-items": "center",
+                "display": "flex",
+                "justify-content": "center",
+                "box-shadow": "rgba(0, 0, 0, 0.15) 6px 5px 16px 0px",
+                "span": {
+                  "display": "flex",
+                  "color": "@primaryColor",
+                  "font-size": "1.5rem",
+                  "width": "1.8rem"
+                }
+              }
+            },
+            "@media (min-width: 1200px)": {
+              ".container": {
+                "max-width": "1500px"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".image": {
+                "margin-top": "4rem",
+                "padding": "0"
+              }
+            },
+            "@media (min-width: 767px) and (max-width: 992px)": {
+              ".image": {
+                "margin-top": "4rem"
+              }
+            },
+            ".image": {
+              "position": "relative"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<section class=\"header2\" group=\"Headers\" mbr-class=\"{'mbr-fullscreen': fullScreen}\" plugins=\"mobirise-icons2, amp-main,amp-lightbox,amp-youtube\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"15\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"15\" condition=\"fullScreen == false\">\n        <input type=\"text\" title=\"Youtube Video URL\" name=\"videoUrl\" value>.\n        <input type=\"image\" name=\"boxbg\" title=\"Video Image\" value=\"../_images/background1.jpg\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Video\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Video Text\" name=\"showTextVideo\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1280.jpg\" selected>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"title-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n            <div class=\"mbr-row mbr-ai-c\" mbr-if=\"showTitle || showSubtitle || showText || showButtons\">\n                <div class=\"bg mbr-col-lg-6\">\n                    <div class=\"text-wrap\">\n                        <h4 class=\"mbr-sectiion-subtitle mbr-fonts-style mbr-bold \" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-sectiion-subtitle\">\n                            Happy Living App Privacy Policy</h4>\n                        <h1 class=\"mbr-section-title mbr-fonts-style mbr-pb-5 mbr-black\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .mbr-section-btn\">We are working hard on our privacy policy.&nbsp;<br>Expect to see it published here soon.&nbsp;</h1>\n                        \n                        <div class=\"link-wrap\" mbr-if=\"showSubtitle\" on=\"tap:my-lightbox\" role=\"button\" tabindex=\"0\">\n                            <div class=\"link\">\n                                <div class=\"icon-wrap\">\n                                    <span mbr-icon class=\"amp-iconfont fa-play fa mbr-flex mbr-jc-c mobi-mbri\"></span> \n                                </div>\n                            </div>\n                            <div class=\"block-text\">\n                                <h6 class=\"video-text mbr-fonts-style mbr-bold mbr-black\" mbr-theme-style=\"display-4\" mbr-if=\"showTextVideo\" data-app-selector=\".video-text\">\n                                    HOW IT WORKS\n                                </h6>\n                            </div>\n                        </div>\n                    </div>\n                    <amp-lightbox id=\"my-lightbox\" layout=\"nodisplay\">\n                        <div class=\"lightbox d-flex mbr-justify-content-center\" on=\"tap:my-lightbox.close\" role=\"button\" tabindex=\"0\">\n                            <div class=\"container\">\n                                <div class=\"video-block\">\n                                    <amp-youtube width=\"4\" height=\"3\" layout=\"responsive\" data-videoid=\"lBTCB7yLs8Y\">\n                                        <div placeholder class=\"placeholder\"></div>\n                                    </amp-youtube>\n                                </div>\n                            </div>\n                        </div>\n                    </amp-lightbox>\n                </div>\n                <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6 image\" id=\"mp_image\">\n                    <amp-img src=\"@PROJECT_PATH@/assets/images/mbr-1012x675.jpeg\" alt=\"image\" height=\"9\" width=\"16\" layout=\"responsive\" class=\"mobirise-loader\">\n                        <div placeholder class=\"placeholder\"></div>\n                        <img src=\"@PROJECT_PATH@/assets/images/mbr-1012x675.jpeg\" class=\"mbr-temp\" alt>\n                    </amp-img>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "scZlPATujV",
+          "_anchor": "header2-0",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
